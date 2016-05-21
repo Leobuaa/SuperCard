@@ -17,11 +17,16 @@
 
 @implementation ViewController
 
+- (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
+    self.playingCardView.faceUp = !self.playingCardView.faceUp;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.playingCardView.suit = @"♠︎";
     self.playingCardView.rank = 13;
+    [self.playingCardView addGestureRecognizer:[[UIGestureRecognizer alloc] initWithTarget:self.playingCardView action:@selector(pinch:)]];
 }
 
 - (void)didReceiveMemoryWarning {

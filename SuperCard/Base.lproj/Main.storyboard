@@ -20,9 +20,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-P5-MgX" customClass="PlayingCardView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="108" y="80" width="195" height="294"/>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dAd-l0-bOZ" appends="YES" id="aiZ-Cl-VnD"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.070234633982181549" green="0.8194471001625061" blue="0.16806918382644653" alpha="0.73529094827586206" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,8 +46,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="dAd-l0-bOZ">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="mzp-2p-NIk"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-64.5" y="370.5"/>
+            <point key="canvasLocation" x="-502.5" y="263.25"/>
         </scene>
     </scenes>
 </document>
